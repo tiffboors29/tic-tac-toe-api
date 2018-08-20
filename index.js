@@ -14,7 +14,7 @@ app.get('/', (req, res, next) => {
 		}
 		else if (game.isBoardValid(board) && game.isOTurn(board)){
 			let newBoard = game.takeTurn(board);
-			res.send(newBoard.join(','));
+			res.send(newBoard.join(''));
 		}
 		else {
 			handleError(next);
